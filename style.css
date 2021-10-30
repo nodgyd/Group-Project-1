@@ -68,7 +68,16 @@ a:link {
     border-radius: 25px;
     background-color: var(--secondary);
     color: white;
+    text-shadow: 2px 2px black;
 
+}
+
+p {
+    padding: 10px;
+    background-color: var(--secondary);
+    color: white;
+    border: solid;
+    border-radius: 25px;
 }
 
 input {
@@ -77,15 +86,28 @@ input {
     color: white;
     border-radius: 25px;
 }
+form {    
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px white;
+    background-color: var(--primary);
+    border-style: solid;
+    border-radius: 25px;
+    padding: 10px;
+}
 
 button {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     border-style: solid;
-    border-color: white;
+    border-color: var(--secondary);
     border-radius: 25px;
     background-color: var(--primary);
     color: var(--secondary);    
-    justify-content: center;
+    padding: 10px;
+    
 
 }
 button:hover {
@@ -93,4 +115,5 @@ button:hover {
     background-color: var(--secondary);
     color: white;
     justify-content: center;
+    font-weight: bold;
 }

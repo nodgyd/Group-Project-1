@@ -1,0 +1,96 @@
+:root {
+/* setting custom property variables */
+    --primary: rgb(246,212,204); /* (Muted Light Red) sourced from http://khroma.co/train/ */
+    --secondary: rgb(218,97,76) ; /* (Muted Midtone Red) sourced from http://khroma.co/train/ */
+    --lowlight: rgb(147,31,21); /* (Rich Dark Red) sourced from http://khroma.co/train/ */
+    --highlight: rgb(234,150,53); /* (Rich Midtone Orange) sourced from http://khroma.co/train/ */
+    --font-size-main: 50px
+}
+
+body {
+    /* added a transparent queston mark over the bg, do we like y/n? */
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://www.pngall.com/wp-content/uploads/2/Question-Mark-PNG-Picture.png"); /* sourced from https://www.pngall.com/question-mark-png */
+    color: var(--secondary);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--primary);
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+}
+
+.topnav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 100px;
+    padding: 10px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 25px;
+    background-color: var(--secondary);
+    color: var(--text-color);
+    justify-content: center;
+}
+/* setting topnav link colors */
+a:link {
+    color: white;
+  }
+  
+  a:visited {
+    color: var(--lowlight);
+  }
+  
+  a:hover {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: var(--highlight);
+    text-decoration: underline;
+  }
+
+.header {
+    display: flex;
+    width: 500px;
+    height: 50px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-style: solid;
+    border-color: white;
+    border-radius: 25px;
+    background-color: var(--secondary);
+    color: white;
+
+}
+
+input {
+    background-color: var(--secondary);
+    border-color: white;
+    color: white;
+    border-radius: 25px;
+}
+
+button {
+    display: flex;
+    border-style: solid;
+    border-color: white;
+    border-radius: 25px;
+    background-color: var(--primary);
+    color: var(--secondary);    
+    justify-content: center;
+
+}
+button:hover {
+    display: flex;
+    background-color: var(--secondary);
+    color: white;
+    justify-content: center;
+}

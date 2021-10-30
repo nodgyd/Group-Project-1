@@ -12,6 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     background-image: url("https://www.pngall.com/wp-content/uploads/2/Question-Mark-PNG-Picture.png"); /* sourced from https://www.pngall.com/question-mark-png */
+    background-size: 150px;
     color: var(--secondary);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: var(--primary);

@@ -17,9 +17,12 @@ $("#food").keydown(function (event) {
     foodChoiceArr.push(inputValue);
     console.log(foodChoiceArr);
     // user input 
-    $(".foodInput").append(`
+    if(!inputValue) {
+    } else {
+      $(".foodInput").append(`
       <li>${inputValue}</li>`)
-    // clear the value
+      // clear the value
+    }
     $("input").val("");
   }
 });
@@ -33,9 +36,12 @@ $("#location").keydown(function (event) {
     // push inputValue text into ingrChoiceArray
     foodLocation = inputValue.split(" ").join("%20");
     console.log(foodLocation);
-    $(".cityInput").append(`
-    <p>${inputValue}</p>
+    if (!inputValue){
+    } else (
+      $(".cityInput").append(`
+      <p>${inputValue}</p>
     `)
+    )
     // clear the value
     $("input").val("");
   }

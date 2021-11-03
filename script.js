@@ -5,8 +5,8 @@ var finalChoice = [];
 
 //when app is loaded check localStorage
 //if there is data obj in localStorage, and iterable, call yelpCard to render data --
-var userData = localStorage.getItem("data") ? JSON.parse(localStorage.getItem("data")): [];
-if(userData.length) yelpCard(userData)
+var data = localStorage.getItem("data") ? JSON.parse(localStorage.getItem("data")): [];
+if(data.length) yelpCard(data)
 // input for food types
 $("#food").keydown(function (event) {
   if (event.keyCode == 13) {
@@ -33,9 +33,6 @@ $("#location").keydown(function (event) {
     // push inputValue text into ingrChoiceArray
     foodLocation = inputValue.split(" ").join("%20");
     console.log(foodLocation);
-    $(".cityInput").append(`
-      <p>${inputValue}</p>
-    `)
     // clear the value
     $("input").val("");
   }
@@ -54,10 +51,10 @@ var submitBtn = $("#submit").on("click", function () {
         'Authorization': `Bearer ${yelpKey}`,
         'Access-Control-Allow-Origin': ""
       }
-    }).then(function (res) { return res.json() }).then(function (data) {
-      console.log(data)
-      yelpCard(data.businesses)
-      localStorage.setItem("data", JSON.stringify(data.businesses))
+    }).then(function (res) { return res.json() }).then(function (api) {
+      console.log(api)
+      yelpCard(api.businesses)
+      localStorage.setItem("data", JSON.stringify(api.businesses))
     })
   }
   localStorage.setItem("food", finalChoice);

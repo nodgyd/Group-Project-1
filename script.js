@@ -2,6 +2,11 @@ var requestUrl = 'https://wendy-cors.herokuapp.com/https://api.yelp.com/v3';
 var yelpKey = '1yZDubbnd0fetob942sSxY0NwOoeK4luhKs0JAU-B6id-kJ6t6SbBnHABlIDh9-n7t6huj-QlsjzQcE_17b_j2nKM-eIefKDRGib9AiT5gV5O-AFq64XY6B2_Md4YXYx';
 var foodChoiceArr = [];
 var finalChoice = [];
+
+//when app is loaded check localStorage
+//if there is data obj in localStorage, and iterable, call yelpCard to render data --
+var data = localStorage.getItem("data") ? JSON.parse(localStorage.getItem("data")): [];
+if(data.length) yelpCard(data)
 // input for food types
 $("#food").keydown(function (event) {
   if (event.keyCode == 13) {
@@ -46,22 +51,30 @@ var submitBtn = $("#submit").on("click", function () {
         'Authorization': `Bearer ${yelpKey}`,
         'Access-Control-Allow-Origin': ""
       }
-    }).then(function (res) { return res.json() }).then(function (data) {
-      console.log(data)
-      yelpCard(data.businesses)
+    }).then(function (res) { return res.json() }).then(function (api) {
+      console.log(api)
+      yelpCard(api.businesses)
+      localStorage.setItem("data", JSON.stringify(api.businesses))
     })
   }
-  searchBusiness(finalChoice)
+  localStorage.setItem("food", finalChoice);
+  localStorage.setItem("location", foodLocation);
+  searchBusiness(finalChoice);
 })
 
 function yelpCard(data) {
   for (var i = 0; i < data.length; i++) {
     $("#cards").append(`
-          <a id="yelpTitle" href="${data[i].url}"> ${data[i].name}
-            <img id="yelpImg" src="${data[i].image_url}">
-            <p id="rating">${data[i].rating}</p>
-            <p id="address">${data[i].location.display_address.join(" ")}</p>
-          </a>
-          `)
+    <a id="yelpTitle" href="${data[i].url}"> ${data[i].name}
+    <img id="yelpImg" src="${data[i].image_url}">
+    <p id="rating">${data[i].rating}</p>
+    <p id="address">${data[i].location.display_address.join(" ")}</p>
+    </a>
+    `)
   }
 }
+
+$("#clear").on("click", function (){
+  localStorage.clear();
+  location.reload();
+})

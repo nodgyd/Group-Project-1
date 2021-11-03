@@ -33,6 +33,9 @@ $("#location").keydown(function (event) {
     // push inputValue text into ingrChoiceArray
     foodLocation = inputValue.split(" ").join("%20");
     console.log(foodLocation);
+    $(".cityInput").append(`
+    <p>${inputValue}</p>
+    `)
     // clear the value
     $("input").val("");
   }

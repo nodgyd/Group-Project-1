@@ -75,8 +75,8 @@ a:link {
 
 p {
     padding: 10px;
-    background-color: var(--secondary);
-    color: white;
+    background-color: white;
+    color: var(--secondary);
     border: solid;
     border-radius: 25px;
 }

@@ -4,21 +4,29 @@
 <head>
     <!-- Set Title and Linked CSS-->
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Resturant Randomizer</title>
 
 </head>
 <!--Created Top Nav for links. Home needed?-->
 <div class="topnav">
 
-    <a class="active" href="#home">Home</a>
-    <a href="#github">Github</a>
-    <a href="#yelp">Yelp</a>
-    <a href="#contact">Contact</a>
+      <a class="active" href="#home">Home</a>
+      <a href="#github">Github</a>
+      <a href="#yelp">Yelp</a>
+      <a href="#contact">Contact</a>
 
 </div>
 
 <body>
+    <div class="topnav">
+    
+        <a class="active" href="#home">Home</a>
+        <a href="#github">Github</a>
+        <a href="#yelp">Yelp</a>
+        <a href="#contact">Contact</a>
+    
+    </div>
 
     <div class="header">
 
@@ -27,7 +35,7 @@
     </div>
 
         <p>
-            "Where do you want to go" Wherever you do...""
+            "Where do you want to go?" Wherever you do...""
         </p>
         <!--Created Form for fill boxes for inputs. Need to look into creating the wheels options from user inputs.-->
         <form>
@@ -36,11 +44,23 @@
             <input type="text" id="location" name="location"><br>
             <label for="food">Food Type:</label><br>
             <input type="text" id="food" name="food">
+            <div class="foodInput"></div>
 
         </form>
         <!--Button for Submit.-->
-        <button type="button">Submit!</button>
+        <button type="button" id="submit">Submit!</button>
+        <!--Div for Randomizer Results section.-->
+    <div class="randomizer">
+
+    </div>
+        <!--Div for restaurant results-->
+        <div class="restaurants">
+            <!-- Do we need a heading for this seciton?-->
+            <h2>Restaurants Near You</h2>
+
+    </div>
     <!--Linked Javascript for later-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     </body>
 

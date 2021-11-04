@@ -81,6 +81,15 @@ p {
     border-radius: 25px;
 }
 
+.subtext {
+    font-size: smaller;
+    padding: 5px;
+    background-color: white;
+    color: var(--secondary);
+    border: solid;
+    border-radius: 25px;
+}
+
 input {
     background-color: var(--secondary);
     border-color: white;

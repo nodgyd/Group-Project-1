@@ -70,14 +70,14 @@ var submitBtn = $("#submit").on("click", function () {
   localStorage.setItem("location", foodLocation);
   searchBusiness(finalChoice);
 })
-
+// added classes to correspond to bootstrap here, is this correct? 
 function yelpCard(data) {
   for (var i = 0; i < data.length; i++) {
     $("#cards").append(`
-    <a id="yelpTitle" href="${data[i].url}" target="_blank">${data[i].name}
-    <img id="yelpImg" src="${data[i].image_url}">
-    <p id="rating">Rating: ${data[i].rating}</p>
-    <p id="address">Address: ${data[i].location.display_address.join(" ")}</p>
+    <a id="yelpTitle" class="card-header" href="${data[i].url}" target="_blank">${data[i].name}
+    <img id="yelpImg" class="card-img-top" src="${data[i].image_url}">
+    <p id="rating" class="card-text">Rating: ${data[i].rating}</p>
+    <p id="address" class="card-text">Address: ${data[i].location.display_address.join(" ")}</p>
     </a>
     `)
   }

@@ -6,13 +6,11 @@
     --highlight: rgb(234,150,53); /* (Rich Midtone Orange) sourced from http://khroma.co/train/ */
     --font-size-main: 50px
 }
-
 body {
-    /* added a transparent queston mark over the bg, do we like y/n? */
+/* changed bg to linear gradient */
     display: flex;
     flex-direction: column;
-    background-image: url("https://www.pngall.com/wp-content/uploads/2/Question-Mark-PNG-Picture.png"); /* sourced from https://www.pngall.com/question-mark-png */
-    background-size: 150px;
+    background-image: linear-gradient(to bottom left, rgb(218,97,76) , rgb(246,212,204));
     color: var(--secondary);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: var(--primary);
@@ -20,7 +18,7 @@ body {
     align-content: space-around;
     align-items: center;
 }
-
+/* styling the top left nav menu */
 .topnav {
     display: flex;
     flex-direction: column;
@@ -35,6 +33,7 @@ body {
     border-radius: 25px;
     background-color: var(--secondary);
     color: var(--text-color);
+    font-size: smaller;
     justify-content: center;
 }
 /* setting topnav link colors */
@@ -55,12 +54,13 @@ a:link {
     color: var(--highlight);
     text-decoration: underline;
   }
-
+/* moved the bg image to the header */
 .header {
     display: flex;
-    width: 500px;
-    height: 50px;
-    padding: 10px;
+    margin: 15px;
+    width: 600px;
+    height: 100px;
+    padding: 50px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -68,11 +68,12 @@ a:link {
     border-color: white;
     border-radius: 25px;
     background-color: var(--secondary);
+    background-image: url("https://www.pngall.com/wp-content/uploads/2/Question-Mark-PNG-Picture.png");
+    background-size: 100px;
     color: white;
     text-shadow: 2px 2px black;
-
 }
-
+/* basic styling for the body */
 p {
     padding: 10px;
     background-color: white;
@@ -80,8 +81,8 @@ p {
     border: solid;
     border-radius: 25px;
 }
-
-.subtext {
+/* adding some ~flavor text~ */
+.flavortext {
     font-size: smaller;
     padding: 5px;
     background-color: white;
@@ -89,8 +90,9 @@ p {
     border: solid;
     border-radius: 25px;
 }
-
+/* visibility & differentiation for input form and buttons */
 input {
+    margin: 5px;
     background-color: var(--secondary);
     border-color: white;
     color: white;
@@ -105,7 +107,6 @@ form {
     border-radius: 25px;
     padding: 10px;
 }
-
 button {
     display: flex;
     flex-direction: column;
@@ -117,9 +118,8 @@ button {
     background-color: var(--primary);
     color: var(--secondary);    
     padding: 10px;
-    
-
 }
+/* action on hover */
 button:hover {
     display: flex;
     background-color: var(--secondary);

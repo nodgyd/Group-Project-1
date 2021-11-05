@@ -75,7 +75,7 @@ function yelpCard(data) {
   for (var i = 0; i < data.length; i++) {
     $("#cards").append(`
     <div class="col-4">
-      <div class="card py-3">
+      <div class="card py-3 shadow-lg rounded">
         <img id="yelpImg" class="card-img-top border border-black img-fluid" src="${data[i].image_url}">
         <div class="card-body">
           <a id="yelpTitle" class="card-title" href="${data[i].url}" target="_blank">Go Here: ${data[i].name}</a>

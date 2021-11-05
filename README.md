@@ -18,7 +18,7 @@ Navigate to your GitHub repository in the browser and then select the Settings t
 ## Usage
 [Project.io](https://nodgyd.github.io/Group-Project-1/)
 
-![screenshot1](./Assets/images/screenshot1.png)
+![screenshot1](./images/screenshot1.png)
 
 ## Credits
 Github Contributors

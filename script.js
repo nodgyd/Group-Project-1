@@ -74,8 +74,8 @@ var submitBtn = $("#submit").on("click", function () {
 function yelpCard(data) {
   for (var i = 0; i < data.length; i++) {
     $("#cards").append(`
-    <a id="yelpTitle" class="card-title col-4" href="${data[i].url}" target="_blank">${data[i].name}
-    <img id="yelpImg" class="card-img-top" src="${data[i].image_url}">
+    <a id="yelpTitle" class="card-title col-4 border border-white" href="${data[i].url}" target="_blank">${data[i].name}
+    <img id="yelpImg" class="card-img-top rounded-1 border border-black" src="${data[i].image_url}">
     <p id="rating" class="card-text">Rating: ${data[i].rating}</p>
     <p id="address" class="card-text">Address: ${data[i].location.display_address.join(" ")}</p>
     </a>

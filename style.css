@@ -1,120 +1,166 @@
 :root {
-/* setting custom property variables */
-    --primary: rgb(246,212,204); /* (Muted Light Red) sourced from http://khroma.co/train/ */
-    --secondary: rgb(218,97,76) ; /* (Muted Midtone Red) sourced from http://khroma.co/train/ */
-    --lowlight: rgb(147,31,21); /* (Rich Dark Red) sourced from http://khroma.co/train/ */
-    --highlight: rgb(234,150,53); /* (Rich Midtone Orange) sourced from http://khroma.co/train/ */
-    --font-size-main: 50px
+  /* setting custom property variables */
+  --primary: rgb(
+    246,
+    212,
+    204
+  ); /* (Muted Light Red) sourced from http://khroma.co/train/ */
+  --secondary: rgb(
+    218,
+    97,
+    76
+  ); /* (Muted Midtone Red) sourced from http://khroma.co/train/ */
+  --lowlight: rgb(
+    147,
+    31,
+    21
+  ); /* (Rich Dark Red) sourced from http://khroma.co/train/ */
+  --highlight: rgb(
+    234,
+    150,
+    53
+  ); /* (Rich Midtone Orange) sourced from http://khroma.co/train/ */
+  --font-size-main: 50px;
 }
 
-body {
-    /* added a transparent queston mark over the bg, do we like y/n? */
-    display: flex;
-    flex-direction: column;
-    background-image: url("https://www.pngall.com/wp-content/uploads/2/Question-Mark-PNG-Picture.png"); /* sourced from https://www.pngall.com/question-mark-png */
-    background-size: 150px;
-    color: var(--secondary);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: var(--primary);
-    justify-content: center;
-    align-content: space-around;
-    align-items: center;
+.wrapper {
+  /* changed bg to linear gradient */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom left, rgb(218,97,76) , rgb(246,212,204));
+  color: var(--secondary);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--primary);
+  justify-content: center;
+  align-content: space-around;
+  align-items: center;
 }
-
+/* styling the top left nav menu */
 .topnav {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 75px;
-    height: 100px;
-    padding: 10px;
-    border-style: solid;
-    border-color: white;
-    border-radius: 25px;
-    background-color: var(--secondary);
-    color: var(--text-color);
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 5px;
+  width: 100px;
+  height: 200px;
+  padding: 10px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 25px;
+  background-color: var(--secondary);
+  color: var(--text-color);
+  font-size: smaller;
+  justify-content: center;
 }
 /* setting topnav link colors */
 a:link {
-    color: white;
-  }
-  
-  a:visited {
-    color: var(--lowlight);
-  }
-  
-  a:hover {
-    color: black;
-    text-decoration: underline;
-  }
-  
-  a:active {
-    color: var(--highlight);
-    text-decoration: underline;
-  }
+  color: var(--lowlight);
+}
 
+a:visited {
+  color: var(--lowlight);
+}
+#yelpImg {
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+    margin-left: 7px;
+}
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--highlight);
+  text-decoration: underline;
+}
+/* moved the bg image to the header */
 .header {
-    display: flex;
-    width: 500px;
-    height: 50px;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-style: solid;
-    border-color: white;
-    border-radius: 25px;
-    background-color: var(--secondary);
-    color: white;
-    text-shadow: 2px 2px black;
-
+  display: flex;
+  margin: 15px;
+  width: 600px;
+  height: 100px;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-style: solid;
+  border-color: white;
+  border-radius: 25px;
+  background-color: var(--secondary);
+  background-image: url("https://www.pngall.com/wp-content/uploads/2/Question-Mark-PNG-Picture.png");
+  background-size: 100px;
+  color: white;
+  text-shadow: 2px 2px black;
 }
-
-p {
-    padding: 10px;
-    background-color: white;
-    color: var(--secondary);
-    border: solid;
-    border-radius: 25px;
+/* basic styling for the body */
+p, a {
+  padding: 10px;
+  background-color: white;
+  color: var(--secondary);
+  border: solid;
+  border-radius: 25px;
 }
-
+/* adding some ~flavor text~ */
+.flavortext {
+  font-size: smaller;
+  padding: 5px;
+  background-color: white;
+  color: var(--secondary);
+  border: solid;
+  border-radius: 25px;
+}
+/* visibility & differentiation for input form and buttons */
 input {
-    background-color: var(--secondary);
-    border-color: white;
-    color: white;
-    border-radius: 25px;
+  margin: 5px;
+  background-color: var(--secondary);
+  border-color: white;
+  color: white;
+  border-radius: 25px;
 }
-form {    
-    font-weight: bold;
-    text-align: center;
-    text-shadow: 2px 2px white;
-    background-color: var(--primary);
-    border-style: solid;
-    border-radius: 25px;
-    padding: 10px;
+form {
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px white;
+  background-color: var(--primary);
+  border-style: solid;
+  border-radius: 25px;
+  padding: 10px;
 }
-
 button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    border-style: solid;
-    border-color: var(--secondary);
-    border-radius: 25px;
-    background-color: var(--primary);
-    color: var(--secondary);    
-    padding: 10px;
-    
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-style: solid;
+  border-color: var(--secondary);
+  border-radius: 25px;
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 10px;
 }
+/* action on hover */
 button:hover {
-    display: flex;
-    background-color: var(--secondary);
-    color: white;
-    justify-content: center;
-    font-weight: bold;
+  display: flex;
+  background-color: var(--secondary);
+  color: white;
+  justify-content: center;
+  font-weight: bold;
+}
+#parentContainer {
+  background-color: white;
+}
+ .col-4 {
+     padding-top: 12px;
+     padding-bottom: 12px;
+ }
+li {
+    list-style-type: none;
+    text-align: center;
+}
+ul {
+    padding-left: 0;
 }

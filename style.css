@@ -157,4 +157,10 @@ button:hover {
      padding-top: 12px;
      padding-bottom: 12px;
  }
-
+li {
+    list-style-type: none;
+    text-align: center;
+}
+ul {
+    padding-left: 0;
+}
